@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashain Countdown</title>
+  <link rel="icon" type="image/png" href="media/dashain-thali.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+  </style>
+</head>
+<body class="bg-white text-gray-800 flex items-center justify-center min-h-screen" style="background: url('media/dashain-bg.png') no-repeat center center fixed; background-size: cover; position: relative; padding-top: 120px;">
+    <!-- Dashain Song Audio -->
+    <audio id="dashainAudio" loop preload="auto">
+        <source src="media/dashain-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <img src="media/subha-dashain.png" alt="Subha Dashain" class="subha-dashain-mobile" style="position: absolute; top: 15px; left: 50%; transform: translateX(-50%); z-index: 10; width: 440px; max-width: 180vw;" />
+  <div class="max-w-4xl w-full text-center timer-container" style="margin-top: 80px; max-width: 900px; padding: 2.5rem;">
+    <!-- Dashain Vibes Header -->
+    <h1 class="text-4xl font-bold mb-4 text-white dashain-title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 2.5rem;">Dashain Countdown</h1>
+    <!-- Countdown Timer -->
+    <div id="countdown" class="grid grid-cols-4 text-center">
+      <div class="timer-box">
+        <span id="days" class="timer-number">00</span>
+        <p class="timer-label">Days</p>
+      </div>
+      <div class="timer-box">
+        <span id="hours" class="timer-number">00</span>
+        <p class="timer-label">Hours</p>
+      </div>
+      <div class="timer-box">
+        <span id="minutes" class="timer-number">00</span>
+        <p class="timer-label">Minutes</p>
+      </div>
+      <div class="timer-box">
+        <span id="seconds" class="timer-number">00</span>
+        <p class="timer-label">Seconds</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    
+    <!-- Audio Play Button -->
+    <div id="audioPrompt" class="mt-4 cursor-pointer bg-white/20 hover:bg-white/30 rounded-xl px-6 py-3 transition-all duration-300 inline-block">
+        <span class="text-base font-semibold text-white">🎵 Play Dashain Music</span>
+    </div>
+    
+    <!-- Audio Stop Button (hidden initially) -->
+    <div id="audioStop" class="mt-4 cursor-pointer bg-red-500/80 hover:bg-red-600/90 rounded-xl px-6 py-3 transition-all duration-300 inline-block" style="display: none;">
+        <span class="text-base font-semibold text-white">⏹️ Stop Music</span>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

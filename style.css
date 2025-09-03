@@ -1,0 +1,230 @@
+.timer-box {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+}
+
+.timer-box:hover {
+  transform: translateY(-12px) scale(1.08);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 0 2px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+}
+
+.timer-number {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: white !important;
+  text-shadow: 
+    2px 2px 8px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  font-family: 'Rowdies', cursive;
+}
+
+.timer-box:hover .timer-number {
+  transform: scale(1.15);
+  text-shadow: 
+    3px 3px 12px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.5),
+    0 0 60px rgba(255, 255, 255, 0.2);
+}
+
+.timer-label {
+  color: rgba(255, 255, 255, 0.95) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  font-family: 'Sofia Sans', sans-serif;
+}
+
+.timer-box:hover .timer-label {
+  color: white !important;
+  transform: translateY(-4px);
+  text-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.9; 
+    transform: scale(1.02);
+  }
+}
+
+.timer-number {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+#countdown {
+  gap: 1.5rem;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px !important;
+  }
+  
+  .timer-container {
+    margin-top: 40px !important;
+    padding: 1.5rem !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: calc(100vw - 2rem) !important;
+  }
+  
+  #countdown {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem;
+  }
+  
+  .timer-box {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+  }
+  
+  .timer-number {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  
+  .timer-label {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+      .subha-dashain-mobile {
+        width: 320px !important;
+        max-width: 95vw !important;
+        top: 15px !important;
+      }  .dashain-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .dashain-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .dashain-footer {
+    margin-top: 1.5rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .dashain-thali-mobile {
+    width: 120px !important;
+    max-width: 30vw !important;
+    bottom: 5px !important;
+    right: 5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-container {
+    padding: 1rem !important;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .timer-box {
+    padding: 1rem 0.75rem;
+  }
+  
+  .timer-number {
+    font-size: 2rem;
+  }
+  
+  .timer-label {
+    font-size: 0.75rem;
+  }
+  
+  #countdown {
+    gap: 0.75rem;
+  }
+  
+  .dashain-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .subha-dashain-mobile {
+    width: 260px !important;
+  }
+}
+
+/* Global Font Setup */
+body {
+  font-family: 'Sofia Sans', sans-serif;
+}
+
+h1, .dashain-title {
+  font-family: 'Rowdies', cursive;
+}
+
+/* Timer Container Styling */
+.timer-container {
+  border: 3px solid rgba(255, 255, 255, 0.4) !important;
+  border-top: none !important;
+  border-radius: 30px !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timer-container:hover {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 0 2px rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-5px);
+}
+
+/* Subha Dashain Image Shadow */
+.subha-dashain-mobile {
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4)) 
+          drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subha-dashain-mobile:hover {
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.5)) 
+          drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3))
+          drop-shadow(0 0 25px rgba(255, 255, 255, 0.1));
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Audio Button Fonts */
+#audioPrompt span, #audioStop span {
+  font-family: 'Sofia Sans', sans-serif;
+  font-weight: 600;
+}
