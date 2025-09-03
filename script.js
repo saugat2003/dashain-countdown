@@ -57,7 +57,7 @@ window.addEventListener('load', function() {
 });
 
 // Set Dashain Date (Example: Oct 11, 2025 Tika Day)
-const dashainDate = new Date("October 11, 2025 00:00:00").getTime();
+const dashainDate = new Date("October 02, 2025 00:00:00").getTime();
 
 const countdown = setInterval(() => {
     const now = new Date().getTime();
